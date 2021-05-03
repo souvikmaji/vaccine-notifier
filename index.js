@@ -15,10 +15,16 @@ fs.readFile("districtCodes.json", (err, data) => {
 const app = express();
 console.log(districtCodes);
 
-app.get("/", function (req, res) {
-    let districtId = req.params[""];
-    let date = "04-05-2021";
+app.get("/codes", function (req, res) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(districtCodes));
+    // let districtId = ;
+    // let date = "04-05-2021";
 
+	// axios.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions', params = {
+	// 	calendarByDistrict: districtId,
+	// 	date: date
+	// })
 
 });
 
