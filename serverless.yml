@@ -7,8 +7,16 @@ provider:
   region: ap-south-1
 
 functions:
-  app:
-    handler: index.handler
+  notifyRegistration:
+    cors: true
+    handler: notify.lambda
     events:
-      - http: ANY /
-      - http: 'ANY {proxy+}'
+      - http: 'POST /notify'
+  getCodes:
+    cors: true
+    handler: codes.lambda
+    events:
+      - http: 'GET /codes'
+
+plugins:
+  - serverless-offline
