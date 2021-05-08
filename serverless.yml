@@ -2,21 +2,25 @@ service: vaccine-notifier
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs12.x
   stage: dev
   region: ap-south-1
 
 functions:
   notifyRegistration:
-    cors: true
     handler: notify.lambda
     events:
-      - http: 'POST /notify'
+      - http: 
+          path: '/notify'
+          method: POST
+          cors: true 
   getCodes:
-    cors: true
     handler: codes.lambda
     events:
-      - http: 'GET /codes'
+      - http:
+          path: '/codes'
+          method: GET 
+          cors: true 
 
 plugins:
   - serverless-offline
