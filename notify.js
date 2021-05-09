@@ -2,7 +2,7 @@ const axios = require("axios");
 const mongo = require("mongodb");
 
 const MongoClient = mongo.MongoClient;
-const mongoUrl = `mongodb+srv://${process.env.username}:${process.env.password}@cluster0.mrwko.mongodb.net?retryWrites=true&w=majority`;
+const mongoUrl = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.mrwko.mongodb.net?retryWrites=true&w=majority`;
 
 const cowinUrl = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict";
 

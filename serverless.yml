@@ -9,6 +9,9 @@ provider:
 functions:
   notifyRegistration:
     handler: notify.lambda
+    environment:
+      MONGO_USERNAME: ${env:MONGO_USERNAME}
+      MONGO_PASSWORD: ${env:MONGO_PASSWORD}
     events:
       - http: 
           path: '/notify'
