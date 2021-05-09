@@ -1,21 +1,27 @@
 # vaccine notifier
 
-## Acceptance Criteria
+Application to get notified when vaccine is available in an area.
 
-1. should have option to select state & district
-2. select date range
-3. show details if slot found.
-4. if not found opt in for notification
+Uses the serverless framework to easily test and deploy as AWS lambdas.
 
-## flow
 
-1. fetch list of states
-2. based on state fetch list of districts
-3. parse the response json based on available slots
+## Run instructions
 
-## tech
+```
+npm i
 
-ui -> cdn
-backend -> lambda
+sls offline start
+```
+
+To deploy:
+
+```
+sls deploy
+```
+
+Make sure to have the aws credentials setup in the ~/.aws/config file.
+
+## TODO
+
 scheduling -> CloudWatch Events
 notification -> sns

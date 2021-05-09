@@ -1,6 +1,7 @@
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,vscode
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,vscode
+.git
 
 ### Node ###
 # Logs
@@ -137,4 +138,3 @@ temp/
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/node,vscode
-n
