@@ -2,7 +2,7 @@ const fs = require("fs");
 
 let districtCodes;
 
-fs.readFile("districtCodes.json", (err, data) => {
+fs.readFile("./src/data/districtCodes.json", (err, data) => {
     if(err) {
         console.error("error reading district codes json file");
     }

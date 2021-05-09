@@ -1,6 +1,5 @@
 const axios = require("axios");
 
-
 const cowinUrl = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict";
 
 const getAvailableCenters = async function (districtId, age, date) {
