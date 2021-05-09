@@ -8,7 +8,7 @@ provider:
 
 functions:
   notifyRegistration:
-    handler: notify.lambda
+    handler: notifyRegistration.lambda
     environment:
       MONGO_USERNAME: ${env:MONGO_USERNAME}
       MONGO_PASSWORD: ${env:MONGO_PASSWORD}
@@ -17,6 +17,13 @@ functions:
           path: '/notify'
           method: POST
           cors: true 
+  notify:
+    handler: notify.lambda
+    environment:
+      MONGO_USERNAME: ${env:MONGO_USERNAME}
+      MONGO_PASSWORD: ${env:MONGO_PASSWORD}
+    events:
+      - schedule: rate(6 hours)
   getCodes:
     handler: codes.lambda
     events:
